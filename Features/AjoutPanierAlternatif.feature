@@ -1,6 +1,6 @@
 Feature: Ajout Panier Alternatif
 Scenario Outline: L utilisateur ajoute une quantite au panier. Il se connecte, quitte son navigateur et revient.
-	Given je suis sur la page affichant les details de <produit>
+	Given je suis sur la page affichant tous les details de <produit>
 	When j ajoute <quantite> au panier 
 	And je me connecte avec mon <id> et <password>
 	And je quitte le navigateur puis reviens sur la page nozama en m identifiant a nouveau et j accede au panier

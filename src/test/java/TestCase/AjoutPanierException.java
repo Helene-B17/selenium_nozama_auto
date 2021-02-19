@@ -17,7 +17,7 @@ public class AjoutPanierException {
 	    throw new PendingException();
 	}
 
-	@When("j ajoute {string} au panier")
+	@When("j ajoute {string} a mon panier")
 	public void j_ajoute_au_panier(String string) {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();

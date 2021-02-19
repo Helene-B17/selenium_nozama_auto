@@ -11,3 +11,4 @@ Scenario Outline: L utilisateur remplie les champs pour la connexion
 		| demo1	| demo1		 |
 		| demo2	| demo2		 |
 		| demo3	| demo3		 |
+	

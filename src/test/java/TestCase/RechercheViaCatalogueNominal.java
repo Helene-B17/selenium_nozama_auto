@@ -32,6 +32,7 @@ public class RechercheViaCatalogueNominal {
 	@When("je verifie que {string} est ajoute au panier et que la {int} est la bonne ainsi que le {string}")
 	public void je_verifie_que_est_ajoute_au_panier_et_que_la_est_la_bonne_ainsi_que_le(String string, Integer int1, String string2) {
 	    // Write code here that turns the phrase above into concrete actions
+		
 	    throw new PendingException();
 	}
 

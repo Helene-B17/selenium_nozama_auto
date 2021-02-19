@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import Utilities.SetUp;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -21,11 +22,7 @@ public class Connexion {
 	  @Given("En tant qu utilisateur je souhaite pouvoir me connecter de facon a m authentifier sur la platform Nozama")
 	  public void en_tant_qu_utilisateur_je_souhaite_pouvoir_me_connecter_de_facon_a_m_authentifier_sur_la_platform_Nozama() {
 	      // Write code here that turns the phrase above into concrete actions
-		  System.setProperty("webdriver.chrome.driver", "C:\\Users\\shruti\\selenium\\chromedriver.exe"); 
-		  driver = new ChromeDriver(); 
-		  driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS); 
-		  driver.get("http://127.0.0.1/nozama/");
-		  driver.manage().window().maximize();
+		  SetUp.SetDriverUp(driver);
 	  }
 
 	  @When("Je veux rentrer le {string} dans le champs login")

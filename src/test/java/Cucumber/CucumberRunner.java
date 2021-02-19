@@ -10,7 +10,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 // features = "features" => Récupère l'intégralité du dossier Features et nous interprête le gherkin dans le cucumber dans la console
 // glue = "TestCase" => permet de lier les .features au cas de test dans le package test case TestCase
-@CucumberOptions(features="Features\\Connexion.feature", glue="TestCase\\Connexion.java")
+@CucumberOptions(features="Features", glue="TestCase")
 public class CucumberRunner {
 
 }

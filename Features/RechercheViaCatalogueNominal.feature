@@ -1,21 +1,14 @@
-Feature: Recherche le detail d un produit via le catalogue
-Scenario Outline: L utilisateur recherche un produit via le catalogue N
-	Given En tant qu utilisateur je souhaite pouvoir rechercher un produit de facon a pouvoir afficher le datail du produit via le catalogue
-	When Je veux naviguer dans le <catalogs> puis s√©lectionner une <categories> afin de s√©lectionner un <articles> 
+Feature: Recherche le detail d un produit via le catalogue (cas nominal)
+Scenario Outline: L utilisateur recherche un produit via le catalogue
+	Given En tant qu utilisateur je souhaite pouvoir rechercher un produit de facon a pouvoir afficher le detail du produit via le catalogue
+	When Je veux naviguer dans le <catalogs> puis selectionner une <categories> afin de selectionner un <articles> 
 	And Je veux voir le <detail> sur produit pour l ajouter au panier
-<<<<<<< HEAD
-	And je verifie que <articles> est ajoute au panier et que la <quantite> est la bonne ainsi que le <prix>
-	And Les verifications sont terminees je souhaite retirer <quantite>
+	And Je verifie que <articles> est ajoute au panier et que la <quantite> est la bonne ainsi que le <prix>
+	And Les verifications sont terminees je souhaite supprimer la <quantite> et je clique sur Actualiser le panier
 	Then Je verifie le message <confirmation> est present
 Examples:
-	| catalogs     | categories    | articles 						| detail 							| quantite | prix 			| confirmation															  |
-	| "Jeux video" | "Playstation" | "Sony Playstation 3" | "RÈf. : B0009PRCN0" | 1 			 | "320,00 Ä" | "Il n'y a aucun produit dans votre panier." |
-=======
-	And Je verifie que <articles> est ajoute au panier et que la <quantite> est la bonne ainsi que le <prix>
-	And Les v√©rifications sont termin√©es je souhaite supprimer la <quantite>
-	Then Je v√©rifie que le message <confirmation> est pr√©sent 
-	
-	Examples: 
-	| catalogs	   | categories   | articles             | detail              | quantite | prix        | confirmation |
-	| "Jeux vid√©o" | "Playstation"| "Sony PlayStation 3" | "R√©f. : B0009PRCNO" | 1        | "320,00 ‚Ç¨"  | "Il n'y a aucun produit dans votre panier." |
->>>>>>> 13153b86ed31c3dad59565a444a0e538ecf866d4
+	| catalogs     | categories    | articles 						                | detail 							  | quantite | prix 			| confirmation															  |
+	| "Jeux vidÈo" | "Playstation" | "Sony Playstation 3"                 | "RÈf. : B0009PRCN0"   | 1 			 | "320,00 Ä" | "Il n'y a aucun produit dans votre panier." |
+	| "Jeux vidÈo" | "Wii & DS"    | "Nintendo DS Lite"                   | "RÈf. : B000FO4KO8"   | 1        | "145,80 Ä" | "Il n'y a aucun produit dans votre panier." |
+	| "Jeux vidÈo" | "Xbox"   		 | "Microsoft Xbox 360"                 | "RÈf. : B000NVLEQK"   | 1        | "189,95 Ä" | "Il n'y a aucun produit dans votre panier." |
+	| "Livres" 		 |  ""           | "Industrialiser le test fonctionnel" | "RÈf. : 9782100515332"| 1        | "33,00 Ä"  | "Il n'y a aucun produit dans votre panier." |

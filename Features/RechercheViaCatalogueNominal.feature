@@ -1,8 +1,17 @@
-Feature: Recherche le détail d un produit via le catalogue
-Scenario: L utilisateur recherche un produit via le catalogue
-	Given En tant qu utilisateur je souhaite pouvoir rechercher un produit de façon à pouvoir afficher le détail du produit via le catalogue
-	When Je veux naviguer dans le catalogue par categorie
-	And Je veux sélectionner un produit pour voir le détail du produit
+Feature: Recherche le detail d un produit via le catalogue
+Scenario Outline: L utilisateur recherche un produit via le catalogue
+	Given En tant qu utilisateur je souhaite pouvoir rechercher un produit de faï¿½on ï¿½ pouvoir afficher le dï¿½tail du produit via le catalogue
+	When Je veux naviguer dans le <catalogs>
+	And  Je veux sÃ©lectionner une <categories>
+	And Je veux sï¿½lectionner un <articles> 
+	And Je veux voir le <detail> sur produit 
 	And Je veux l ajouter au panier
-	Then Je verifie que l article est ajouté au panier
+	And Je verifie que <articles> est ajoutï¿½ au panier
+	And Que la <quantite> est la bonne
+	Then Que le <prix> est le bon
+	When Les vÃ©rifications sont terminÃ©es je souhaite retirer <quantite>
+	And Je vÃ©rifie que le message <confirmation> est prÃ©sent
 	
+	Examples: 
+	| catalogs	   | categories   | articles             | detail              | quantite | prix        | confirmation |
+	| "Jeux vidÃ©o" | "Playstation"| "Sony PlayStation 3" | "RÃ©f. : B0009PRCNO" | 1        | "320,00 â‚¬"  | "Il n'y a aucun produit dans votre panier." |

@@ -12,5 +12,5 @@ Feature: Valider panier (cas alternatif1)
     Examples:
 		| produit													| prix 			| quantite 	| total   | nouvellequantite | nouveauprix | nouveautotal |
 		| "Nintendo Wii"									| "189,20" 	| 1			   	| "189,20"| 2                | "378,40"    | "378,40"     | 
-		| "Pratique des tests logiciels"	| "29,00" 	| 1				  | "29,00" | 0                | "0"         | "0"          |
+		| "Pratique des tests logiciels"	| "29,00" 	| 1				  | "29,00" | 100              | "2900,00"   | "2900,00"    |
 		| "Tester une application web"		| "37,05" 	| 1				  | "37,05" | 5                | "185,25"    | "185,25"     |

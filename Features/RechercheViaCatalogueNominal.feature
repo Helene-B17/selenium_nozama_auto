@@ -11,7 +11,7 @@ Feature: Recherche le detail d un produit via le catalogue (cas nominal)
 
     Examples: 
       | catalogs     | categories    | articles                             | detail                 | quantite | prix       | confirmation                                |
-      | "Jeux vidéo" | "Playstation" | "Sony Playstation 3"                 | "Réf. : B0009PRCN0"    |        1 | "320,00 €" | "Il n'y a aucun produit dans votre panier." |
-      | "Jeux vidéo" | "Wii & DS"    | "Nintendo DS Lite"                   | "Réf. : B000FO4KO8"    |        1 | "145,80 €" | "Il n'y a aucun produit dans votre panier." |
-      | "Jeux vidéo" | "Xbox"        | "Microsoft Xbox 360"                 | "Réf. : B000NVLEQK"    |        1 | "189,95 €" | "Il n'y a aucun produit dans votre panier." |
-      | "Livres"     | ""            | "Industrialiser le test fonctionnel" | "Réf. : 9782100515332" |        1 | "33,00 €"  | "Il n'y a aucun produit dans votre panier." |
+      | "Jeux vid" | "Playstation" | "Sony Playstation 3"                 | "B0009PRCN0"    |        1 | "320,00" | "Il n'y a aucun produit dans votre panier. " |
+      | "Jeux vid" | "Wii & DS"    | "Nintendo DS Lite"                   | "B000FO4KO8"    |        1 | "145,80" | "Il n'y a aucun produit dans votre panier. " |
+      | "Jeux vid" | "Xbox"        | "Microsoft Xbox 360"                 | "B000NVLEQK"    |        1 | "199,95" | "Il n'y a aucun produit dans votre panier. " |
+      | "Livres"     | ""            | "Industrialiser le test fonctionnel" | "9782100515332" |        1 | "33,00"  | "Il n'y a aucun produit dans votre panier. " |

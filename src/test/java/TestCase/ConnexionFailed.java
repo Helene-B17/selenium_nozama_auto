@@ -23,7 +23,7 @@ public class ConnexionFailed {
 	    throw new PendingException();
 	}
 
-	@When("Je veux rentrer le {string} dans le champs Mot de Passe")
+	@When("Je veux rentrer le {string} dans le champs mot de passe")
 	public void je_veux_rentrer_le_dans_le_champs_Mot_de_Passe(String string) {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();

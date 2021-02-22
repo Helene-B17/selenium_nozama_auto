@@ -11,8 +11,8 @@ import cucumber.api.java.en.When;
 
 public class AjoutPanierAlternatif {
 
-	@Given("je suis sur la page affichant les details de {string}")
-	public void je_suis_sur_la_page_affichant_les_details_de(String string) {
+	@Given("je suis sur la page affichant tous les details de {string}")
+	public void je_suis_sur_la_page_affichant_tous_les_details_de(String string) {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}

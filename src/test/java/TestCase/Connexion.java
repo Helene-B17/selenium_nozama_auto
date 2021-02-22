@@ -11,6 +11,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import Utilities.SetUp;
 import cucumber.api.PendingException;
+import cucumber.api.java.After;
+import cucumber.api.java.AfterStep;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -52,15 +54,13 @@ public class Connexion {
 	  @When("Je verifie que je suis bien sur la page nozama en mode connecte")
 	  public void je_verifie_que_je_suis_bien_sur_la_page_nozama_en_mode_connecte() {
 	      // Write code here that turns the phrase above into concrete actions
-		  assertEquals("Se déconnecter",driver.findElement(By.linkText("Se déconnecter")).getText());
+		  assertEquals("Se dÃ©connecter",driver.findElement(By.linkText("Se dÃ©connecter")).getText());
 	    }
 		
 	  @Then("Je me deconnecte en cliquant sur le bouton {string}")
 	  public void je_me_deconnecte_en_cliquant_sur_le_bouton(String string) {
 	      // Write code here that turns the phrase above into concrete actions
-		  string = "Se déconnecter";
 	      driver.findElement(By.linkText(string)).click();
-	      driver.close();
+	      
 	  }
-
 }

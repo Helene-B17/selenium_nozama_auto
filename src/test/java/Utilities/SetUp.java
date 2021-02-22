@@ -9,7 +9,8 @@ public class SetUp {
 	private static WebDriver driver;
 	public static WebDriver SetDriverUp(String browser) {
 		if(driver != null && driver.toString().contains(browser.toLowerCase())) {
-			System.out.println(driver.toString());
+			System.out.println("*****************************************************************************************************************************" +
+					driver.toString());
 			return driver;
 		}
 		

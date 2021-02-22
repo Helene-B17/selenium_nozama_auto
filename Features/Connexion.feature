@@ -7,7 +7,7 @@ Feature: Connexion
     And Je veux rentrer le <motdepasse> dans le champs Mot de Passe
     And Je veux cliquer sur le bouton connexion
     And Je verifie que je suis bien sur la page nozama en mode connecte
-    Then Je me deconnecte en cliquant sur le bouton "Se déconnecter"
+    Then Je me deconnecte en cliquant sur le bouton "Se dÃ©connecter"
 
     Examples: 
       | login   | motdepasse |

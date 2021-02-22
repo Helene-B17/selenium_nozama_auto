@@ -4,11 +4,11 @@ Scenario Outline: L utilisateur recherche un produit via le catalogue
 	When Je veux naviguer dans le <catalogs> puis selectionner une <categories> afin de selectionner un <articles> 
 	And Je veux voir le <detail> sur produit pour l ajouter au panier
 	And Je verifie que <articles> est ajoute au panier et que la <quantite> est la bonne ainsi que le <prix>
-	And Les verifications sont terminees je souhaite supprimer la <quantite> et je clique sur Actualiser le panier
+	And Les verifications sont terminees je souhaite supprimer la 0 et je clique sur Actualiser le panier
 	Then Je verifie le message <confirmation> est present
 Examples:
 	| catalogs     | categories    | articles 						                | detail 							  | quantite | prix 			| confirmation															  |
-	| "Jeux vidï¿½o" | "Playstation" | "Sony Playstation 3"                 | "Rï¿½f. : B0009PRCN0"   | 1 			 | "320,00 ï¿½" | "Il n'y a aucun produit dans votre panier." |
-	| "Jeux vidï¿½o" | "Wii & DS"    | "Nintendo DS Lite"                   | "Rï¿½f. : B000FO4KO8"   | 1        | "145,80 ï¿½" | "Il n'y a aucun produit dans votre panier." |
-	| "Jeux vidï¿½o" | "Xbox"   		 | "Microsoft Xbox 360"                 | "Rï¿½f. : B000NVLEQK"   | 1        | "189,95 ï¿½" | "Il n'y a aucun produit dans votre panier." |
-	| "Livres" 		 |  ""           | "Industrialiser le test fonctionnel" | "Rï¿½f. : 9782100515332"| 1        | "33,00 ï¿½"  | "Il n'y a aucun produit dans votre panier." |
+	| "Jeux vidéo" | "Playstation" | "Sony Playstation 3"                 | "Réf. : B0009PRCN0"   | 1 			 | "320,00 €" | "Il n'y a aucun produit dans votre panier." |
+	| "Jeux vidéo" | "Wii & DS"    | "Nintendo DS Lite"                   | "Réf. : B000FO4KO8"   | 1        | "145,80 €" | "Il n'y a aucun produit dans votre panier." |
+	| "Jeux vidéo" | "Xbox"   		 | "Microsoft Xbox 360"                 | "Réf. : B000NVLEQK"   | 1        | "189,95 €" | "Il n'y a aucun produit dans votre panier." |
+	| "Livres" 		 |  ""           | "Industrialiser le test fonctionnel" | "Réf. : 9782100515332"| 1        | "33,00 €"  | "Il n'y a aucun produit dans votre panier." |

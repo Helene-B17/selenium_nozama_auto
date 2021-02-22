@@ -9,6 +9,6 @@ Feature: Connexion
 
     Examples: 
       | login | motdepasse |
-      | demo1 | demo1      |
-      | demo2 | demo2      |
-      | demo3 | demo3      |
+      | "demo1" | "demo1"   |
+      | "demo2" | "demo2"      |
+      | "demo3" | "demo3"      |

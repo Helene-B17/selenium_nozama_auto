@@ -14,6 +14,7 @@ import cucumber.api.junit.Cucumber;
 		plugin= {"pretty", "json:target/json/output.json", "html:target/html/"},
 		features="Features", 
 		tags= {
+				"@Connexion",
 				"@Search"
 		}
 		

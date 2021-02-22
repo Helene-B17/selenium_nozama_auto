@@ -8,6 +8,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class SetUp {
 	private static WebDriver driver;
 	public static WebDriver SetDriverUp(String browser) {
+		if(driver != null && driver.toString().contains(browser.toLowerCase())) {
+			System.out.println(driver.toString());
+			return driver;
+		}
+		
 		if (browser == "Chrome") {
 		  System.setProperty("webdriver.chrome.driver", "src/test/java/Utilities/chromedriver.exe"); 
 		  driver = new ChromeDriver();

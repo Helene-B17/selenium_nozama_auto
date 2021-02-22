@@ -15,5 +15,5 @@ Scenario Outline: L utilisateur a valide son panier et remplit les champs afin d
 	
 		Examples:
 		| produit							| quantite 		| prix			| login 	| motdepasse 	| prenom 		| nom 		| adresse 	| ville 	| pays 			| codePostal 	| colisPostal 					| montantTTC 	| totalCommande | numCarte 						| dateExp			 			| crypto 	|
-		| "Nintendo DS Lite"	|  "1"				| "145,80"	| "demo1" | "demo1" 		| "demo" 		| "demo" 	| "demo" 		| "demo" 	| "France" 	| "35000" 		| "Colis postal: 8,00 �" 	| "174,96" 		| "182,96"			| "5181888346131442" 	| "03 - March 2021" | "111" 	|
-		| "Test logiciel"			|  "2"				| "72,00"		| "demo1" | "demo1" 		| "demo" 		| "demo" 	| "demo" 		| "demo" 	| "France" 	| "35000" 		| "Colis postal: 8,00 �" 	| "75,96" 		| "83,96"				| "5181888346131442" 	| "03 - March 2021" | "111" 	|
+		| "Nintendo DS Lite"	|  "1"				| "145,80"	| "demo1" | "demo1" 		| "demo" 		| "demo" 	| "demo" 		| "demo" 	| "France" 	| "35000" 		| "Colis postal: 8,00 €"| "174,96" 		| "182,96"			| "5181888346131442" 	| "03 - March 2021" | "111" 	|
+		| "Test logiciel"			|  "2"				| "72,00"		| "demo1" | "demo1" 		| "demo" 		| "demo" 	| "demo" 		| "demo" 	| "France" 	| "35000" 		| "Colis postal: 8,00 €"| "75,96" 		| "83,96"				| "5181888346131442" 	| "03 - March 2021" | "111" 	|

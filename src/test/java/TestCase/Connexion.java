@@ -30,18 +30,18 @@ public class Connexion {
 	  }
 
 	  @When("Je veux rentrer le {string} dans le champs login")
-	  public void je_veux_rentrer_le_dans_le_champs_login(String string) {
+	  public void je_veux_rentrer_le_dans_le_champs_login(String login) {
 	      // Write code here that turns the phrase above into concrete actions
-		  driver.findElement(By.id("edit-name")).clear();
-		 driver.findElement(By.id("edit-name")).sendKeys(string);
+		 driver.findElement(By.id("edit-name")).clear();
+		 driver.findElement(By.id("edit-name")).sendKeys(login);
 	      
 	  }
 
 	  @When("Je veux rentrer le {string} dans le champs Mot de Passe")
-	  public void je_veux_rentrer_le_dans_le_champs_Mot_de_Passe(String string) {
+	  public void je_veux_rentrer_le_dans_le_champs_Mot_de_Passe(String motDePasse) {
 	      // Write code here that turns the phrase above into concrete actions
 		  driver.findElement(By.id("edit-pass")).clear();
-		  driver.findElement(By.id("edit-pass")).sendKeys(string);
+		  driver.findElement(By.id("edit-pass")).sendKeys(motDePasse);
 	    }
 
 	  @When("Je veux cliquer sur le bouton connexion")
@@ -58,9 +58,8 @@ public class Connexion {
 	    }
 		
 	  @Then("Je me deconnecte en cliquant sur le bouton {string}")
-	  public void je_me_deconnecte_en_cliquant_sur_le_bouton(String string) {
+	  public void je_me_deconnecte_en_cliquant_sur_le_bouton(String dc) {
 	      // Write code here that turns the phrase above into concrete actions
-	      driver.findElement(By.linkText(string)).click();
-	      
+	      driver.findElement(By.linkText(dc)).click();   
 	  }
 }

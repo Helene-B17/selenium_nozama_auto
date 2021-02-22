@@ -3,7 +3,9 @@ package TestCase;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import Utilities.SetUp;
 import cucumber.api.PendingException;
@@ -14,30 +16,51 @@ import cucumber.api.java.en.When;
 public class RechercheViaCatalogue {
 
 	private static String browser = "Chrome";
+	// Récupérération du setup du driver
 	private WebDriver driver = SetUp.SetDriverUp(browser);
+	
+	// Manière raccourcie de faire un find by linktext
+	public WebElement findText(String string) {
+		return driver.findElement(By.linkText(string));
+	}
 
-	@Given("En tant qu utilisateur je souhaite pouvoir rechercher un produit via le catalogue de facon a pouvoir l ajouter au panier")
-	public void en_tant_qu_utilisateur_je_souhaite_pouvoir_rechercher_un_produit_via_le_catalogue_de_facon_a_pouvoir_l_ajouter_au_panier() {
+	@Given("En tant qu utilisateur je souhaite pouvoir rechercher un produit via le catalogue de façon à pouvoir l ajouter au panier")
+	public void en_tant_qu_utilisateur_je_souhaite_pouvoir_rechercher_un_produit_via_le_catalogue_de_façon_à_pouvoir_l_ajouter_au_panier() {
 	    // Write code here that turns the phrase above into concrete actions
 	}
 
 	@When("Je veux naviguer dans le {string} par {string}")
-	public void je_veux_naviguer_dans_le_par(String string, String string2) {
+	public void je_veux_naviguer_dans_le_par(String catalogue, String categorie) {
 		// Write code here that turns the phrase above into concrete actions
-		System.out.println("**************************************************************************************************" + 
-		string + " " + string2);
+		// on vérifie que le LIEN catalogue est affiché
+		findText(catalogue).isDisplayed();
+		driver.findElement(By.linkText(catalogue)).click();
+		// Si catégorie est vide, on s'arrête ici, sinon on rentre dans le if
+		if(categorie != "") {
+			findText(categorie).isDisplayed();
+			findText(categorie).click();
+		}
+		
 	}
 
 	@When("Je selectionne un {string} en cliquant sur le bouton Ajouter au panier")
-	public void je_selectionne_un_en_cliquant_sur_le_bouton_Ajouter_au_panier(String string) {
+	public void je_selectionne_un_en_cliquant_sur_le_bouton_Ajouter_au_panier(String produit) {
 		// Write code here that turns the phrase above into concrete actions
-
+		findText(produit).isDisplayed();
+		driver.findElement(By.xpath("//*[@id='edit-submit-16']")).isDisplayed();
+		driver.findElement(By.xpath("//*[@id='edit-submit-16']")).click();
+		
 	}
 
 	@When("Je verifie que le {string} est dans le panier et que la {int} est remplie ainsi que le {string}")
-	public void je_verifie_que_le_est_dans_le_panier_et_que_la_est_remplie_ainsi_que_le(String string, Integer int1,
-			String string2) {
+	public void je_verifie_que_le_est_dans_le_panier_et_que_la_est_remplie_ainsi_que_le(String produit, Integer quantite,
+			String prix) {
 		// Write code here that turns the phrase above into concrete actions
+		findText(produit).isDisplayed();
+		driver.findElement(By.).isDisplayed();
+		String quantity = driver.findElement(By.xpath("//*[@id=\'edit-items-0-qty\']")).getAttribute(prix);
+		System.out.println("mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm " + quantity);
+		
 
 	}
 

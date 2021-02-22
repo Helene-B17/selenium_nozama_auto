@@ -4,7 +4,7 @@ Scenario Outline: L utilisateur recherche un produit via le catalogue
 	When Je veux naviguer dans le <catalogs> puis selectionner une <categories> afin de selectionner un <articles> 
 	And Je veux voir le <detail> sur produit pour l ajouter au panier
 	And Je verifie que <articles> est ajoute au panier et que la <quantite> est la bonne ainsi que le <prix>
-	And Les verifications sont terminees je souhaite supprimer la <quantite> et je clique sur Actualiser le panier
+	And Les verifications sont terminees je souhaite supprimer la 0 et je clique sur Actualiser le panier
 	Then Je verifie le message <confirmation> est present
 Examples:
 	| catalogs     | categories    | articles 						                | detail 							  | quantite | prix 			| confirmation															  |

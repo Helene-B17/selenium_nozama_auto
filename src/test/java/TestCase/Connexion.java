@@ -17,12 +17,14 @@ import cucumber.api.java.en.When;
 
 public class Connexion {
 	
-	  private static WebDriver driver;
+	  
+	  private static String browser = "Chrome";
+	  WebDriver driver;
 	  
 	  @Given("En tant qu utilisateur je souhaite pouvoir me connecter de facon a m authentifier sur la platform Nozama")
 	  public void en_tant_qu_utilisateur_je_souhaite_pouvoir_me_connecter_de_facon_a_m_authentifier_sur_la_platform_Nozama() {
 	      // Write code here that turns the phrase above into concrete actions
-		  SetUp.SetDriverUp(driver);
+		  driver=SetUp.SetDriverUp(browser);
 	  }
 
 	  @When("Je veux rentrer le {string} dans le champs login")

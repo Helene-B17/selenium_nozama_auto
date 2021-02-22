@@ -38,6 +38,8 @@ public class ConnexionFailed {
 	@Then("Je verifie qu un message d erreur s affiche")
 	public void je_verifie_qu_un_message_d_erreur_s_affiche() {
 		assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("Sorry, unrecognized username or password."));
-	    
+	    if(driver.findElement(By.linkText("Se déconnecter")) != null) {
+	    	driver.findElement(By.linkText("Se déconnecter")).click();
+	    }
 	}
 }

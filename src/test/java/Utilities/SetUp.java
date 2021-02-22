@@ -26,7 +26,7 @@ public class SetUp {
 		}
 		
 		  driver.manage().timeouts().implicitlyWait(1,TimeUnit.SECONDS); 
-		  driver.get("http://127.0.0.1/nozama/");
+		  driver.get(GlobalVariable.URL);
 		  driver.manage().window().maximize();
 		  return driver;
 		

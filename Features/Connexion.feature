@@ -1,6 +1,6 @@
+@Connexion @1
 Feature: Connexion
 
-  @Connexion
   Scenario Outline: L utilisateur remplie les champs pour la connexion
     Given En tant qu utilisateur je souhaite pouvoir me connecter de facon a m authentifier sur la platform Nozama
     When Je veux rentrer le <login> dans le champs login
